@@ -1,0 +1,94 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python bot.py"
+healthcheckPath = ""
+healthcheckTimeout = 0
+restartPolicyType = "never"
+```
+
+5. Click **"Commit changes"**
+
+---
+
+### **STEP 2: Redeploy on Railway**
+
+1. **Go back to Railway dashboard**
+
+2. Click on your **shetkari-mitra-bot** service
+
+3. Click **"Settings"** tab (top)
+
+4. Scroll down to **"Deploy"** section
+
+5. Find **"Healthcheck Path"**
+
+6. **Delete** the healthcheck path (leave it empty)
+
+7. Scroll to **"Restart Policy"**
+
+8. Change to **"Never"** (bots don't need restart on failure)
+
+9. Click **"Redeploy"** button
+
+---
+
+## ⚠️ ACTUALLY, BETTER SOLUTION:
+
+Railway free tier has gotten more restrictive recently. Let me give you the **ULTIMATE WORKING SOLUTION:**
+
+---
+
+# 🎯 FINAL SOLUTION: Use Koyeb (100% FREE, Perfect for Bots!)
+
+**Why Koyeb is BEST:**
+- ✅ 100% FREE forever (no credit card!)
+- ✅ Made for bots
+- ✅ No healthcheck issues
+- ✅ Super simple
+- ✅ Works perfectly!
+
+---
+
+## 📋 COMPLETE KOYEB SETUP (5 MINUTES)
+
+### **STEP 1: Go to Koyeb**
+
+1. Open: **https://www.koyeb.com**
+2. Click **"Start for Free"**
+
+---
+
+### **STEP 2: Sign Up**
+
+1. Click **"Sign up with GitHub"**
+2. Authorize Koyeb
+3. You're in!
+
+---
+
+### **STEP 3: Create App**
+
+1. Click **"Create App"**
+
+2. Choose **"GitHub"**
+
+3. Click **"Authorize with GitHub"**
+
+4. Select your repository: **shetkari-mitra-bot**
+
+5. Click **"Select"**
+
+---
+
+### **STEP 4: Configure Deployment**
+
+**Fill in these settings:**
+```
+Builder: Dockerfile (No - use buildpack)
+Build command: pip install -r requirements.txt
+Run command: python bot.py
+
+Region: Frankfurt or Singapore (closest to India)
+Instance Type: Free (Eco)
