@@ -1,8 +1,9 @@
 services:
-  - type: worker
+  - type: web
     name: shetkari-mitra-bot
     env: python
     region: singapore
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
+    healthCheckPath: /
